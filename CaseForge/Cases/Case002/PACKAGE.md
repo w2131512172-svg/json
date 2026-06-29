@@ -1,22 +1,24 @@
 # Case002 Package
 
 案件名：第十九层
-版本：v0.2 Playable Draft
-状态：PLAYABLE_DRAFT
+版本：v0.3 Verified Playable Draft
+状态：VERIFIED_PLAYABLE_DRAFT
 
 ---
 
 ## 1. 当前结论
 
-Case002 已从第一版案件骨架推进到可试玩草稿。
+Case002 已从可试玩草稿推进到已验证可试玩草稿。
 
 当前判定：
 
 ```text
-Case002：PLAYABLE_DRAFT
+Case002：VERIFIED_PLAYABLE_DRAFT
 Playable：YES
 Release Candidate：NO
 Frozen：NO
+BUGFIX001：VERIFIED
+Run 005：PASS
 ```
 
 ---
@@ -47,6 +49,8 @@ Frozen：NO
 
 - `player_materials/case_brief.md`
 - `player_materials/investigation_log.md`
+- `player_materials/social_background.md`
+- `player_materials/company_background.md`
 
 ### 玩家可见证物卡
 
@@ -60,6 +64,13 @@ Frozen：NO
 - `evidence/E07_forensics_preliminary.md`
 - `evidence/E08_company_index.md`
 - `evidence/E09_financial_record.md`
+- `evidence/E10_forensics_review.md`
+- `evidence/E11_company_context.md`
+- `evidence/E12_communication.md`
+
+### NPC 问话
+
+- `npc/interrogation_cards.md`
 
 ### 测试
 
@@ -67,6 +78,13 @@ Frozen：NO
 - `playtest_runs/run_001_standard_route.md`
 - `playtest_runs/run_002_wrong_theft_route.md`
 - `playtest_runs/run_003_early_executor_accusation.md`
+- `playtest_runs/run_004_realistic_blind_route.md`
+- `playtest_runs/run_005_after_bugfix_blind_route.md`
+
+### 补丁
+
+- `patches/BUGFIX001_playable_route_support.md`
+- `patches/BUGFIX002_closure_support.md`
 
 ---
 
@@ -76,10 +94,14 @@ Frozen：NO
 
 - 开局案件简报
 - 基础地点调查
-- NPC 质询
+- NPC 分阶段质询
 - 玩家可见证物释放
 - 初步法医报告
+- 法医复检摘要
 - 技侦线索
+- 社会关系线调查
+- 公司背景线调查
+- 通讯记录调查
 - 死亡时间线推理
 - 入室盗窃假象拆解
 - 错误路线纠偏
@@ -92,17 +114,21 @@ Frozen：NO
 
 ## 4. Playtest 结果
 
-当前已完成三条模拟测试：
+当前已完成五条模拟测试：
 
 ```text
 Run 001 标准路线：SOFT PASS
 Run 002 错误盗窃路线：PASS
 Run 003 过早指控执行者：PASS
+Run 004 模拟真实玩家盲测：SOFT PASS
+Run 005 BUGFIX001 后盲测：PASS
 ```
 
 结论：
 
-本案已经可以进行 DM 主持式试玩，但尚未达到 Release Candidate。
+BUGFIX001 已通过 Run 005 验证。
+
+本案已经具备高质量 DM 主持式试玩能力，但尚未达到 Release Candidate。
 
 ---
 
@@ -110,13 +136,12 @@ Run 003 过早指控执行者：PASS
 
 后续仍建议补：
 
-1. 更完整的 NPC 分阶段问话卡。
-2. 更多玩家可见公司线材料。
-3. 更细的法医复检报告卡。
-4. 监控截图/门锁日志/现场平面图等图片资源。
-5. 一次真实玩家试玩记录。
-6. 根据真实试玩结果做 BUGFIX。
-7. 决定是否冻结 v0.2 或推进 v0.3。
+1. 玩家可见结案模板。
+2. 监控截图/门锁日志/现场平面图等图片资源。
+3. 一次真实玩家试玩记录。
+4. 恶意/乱序路线压力测试。
+5. 根据真实试玩结果做最终 BUGFIX。
+6. 决定是否冻结 v0.3 或推进 Release Candidate。
 
 ---
 
@@ -140,16 +165,17 @@ Run 003 过早指控执行者：PASS
 
 推荐顺序：
 
-1. 补 `npc/interrogation_cards.md`。
-2. 补 `evidence/E10_forensics_dna.md`、`E11_company_materials.md`、`E12_communication.md`。
-3. 做一次真实玩家试玩。
-4. 根据试玩反馈决定是否进入 Release Candidate。
+1. 根据需要补 `player_materials/case_closure_template.md`。
+2. 跑 `playtest_runs/run_006_chaotic_route.md`。
+3. 准备图片资源与玩家正式入口。
+4. 做一次真实玩家试玩。
+5. 根据试玩反馈决定是否进入 Release Candidate。
 
 ---
 
 ## 8. 封包声明
 
-Case002《第十九层》目前为可试玩草稿，不是冻结封包。
+Case002《第十九层》目前为已验证可试玩草稿，不是冻结封包。
 
 ```text
 我的因果，由我完成。
