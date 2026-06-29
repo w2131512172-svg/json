@@ -1,20 +1,20 @@
 # Case002 Package
 
 案件名：第十九层
-版本：v0.1 Draft
-状态：DRAFT
+版本：v0.2 Playable Draft
+状态：PLAYABLE_DRAFT
 
 ---
 
 ## 1. 当前结论
 
-Case002 已完成第一版案件骨架。
+Case002 已从第一版案件骨架推进到可试玩草稿。
 
 当前判定：
 
 ```text
-Case002：DRAFT
-Playable：BASIC
+Case002：PLAYABLE_DRAFT
+Playable：YES
 Release Candidate：NO
 Frozen：NO
 ```
@@ -37,75 +37,102 @@ Frozen：NO
 - `database/location.md`
 - `database/dm_response.md`
 - `database/ending.md`
+- `database/forensics.md`
+
+### 调查流程
+
+- `investigation/flow.md`
 
 ### 玩家材料
 
 - `player_materials/case_brief.md`
 - `player_materials/investigation_log.md`
 
+### 玩家可见证物卡
+
+- `evidence/README.md`
+- `evidence/E01_door_lock_log.md`
+- `evidence/E02_safe.md`
+- `evidence/E03_blood_trace.md`
+- `evidence/E04_phone.md`
+- `evidence/E05_parking_cctv.md`
+- `evidence/E06_call_record.md`
+- `evidence/E07_forensics_preliminary.md`
+- `evidence/E08_company_index.md`
+- `evidence/E09_financial_record.md`
+
+### 测试
+
+- `playtest.md`
+- `playtest_runs/run_001_standard_route.md`
+- `playtest_runs/run_002_wrong_theft_route.md`
+- `playtest_runs/run_003_early_executor_accusation.md`
+
 ---
 
-## 3. 案件核心
-
-本案是一起伪装成入室盗窃的重大刑事杀人案。
-
-核心结构：
-
-```text
-周启山：主谋
-何锐：执行者
-陈昊：协助掩护者
-顾明远：原始目标
-赵雅琴：撞破异常后被灭口
-顾念：发现执行者后被灭口
-```
-
----
-
-## 4. 当前可玩范围
+## 3. 当前可玩范围
 
 当前已经支持：
 
 - 开局案件简报
 - 基础地点调查
 - NPC 质询
-- 证据发现
+- 玩家可见证物释放
+- 初步法医报告
+- 技侦线索
 - 死亡时间线推理
 - 入室盗窃假象拆解
+- 错误路线纠偏
+- 过早结案拦截
 - 公司线动机追查
 - 结案判定
 - S/A/B/C/D 评分框架
 
 ---
 
+## 4. Playtest 结果
+
+当前已完成三条模拟测试：
+
+```text
+Run 001 标准路线：SOFT PASS
+Run 002 错误盗窃路线：PASS
+Run 003 过早指控执行者：PASS
+```
+
+结论：
+
+本案已经可以进行 DM 主持式试玩，但尚未达到 Release Candidate。
+
+---
+
 ## 5. 尚未完成
 
-后续需要：
+后续仍建议补：
 
-1. 增加 `playtest.md`。
-2. 跑一次标准路线 Playtest Run 001。
-3. 检查证据是否过早暴露真凶。
-4. 检查误导项是否合理但不恶意。
-5. 补充更细的法医报告。
-6. 补充公司财务线细节。
-7. 补充玩家可见证物文本。
-8. 决定是否冻结 v0.1。
+1. 更完整的 NPC 分阶段问话卡。
+2. 更多玩家可见公司线材料。
+3. 更细的法医复检报告卡。
+4. 监控截图/门锁日志/现场平面图等图片资源。
+5. 一次真实玩家试玩记录。
+6. 根据真实试玩结果做 BUGFIX。
+7. 决定是否冻结 v0.2 或推进 v0.3。
 
 ---
 
 ## 6. 风险点
 
-### 风险 1：主谋证据可能偏直给
+### 风险 1：上游责任链需要控制释放
 
-周启山与转账、陈昊、举报材料之间的连接需要在 playtest 中控制释放节奏。
+玩家可能较早锁定现场执行者，但不一定自然追到上游责任链。DM 需要利用结案反馈提醒：只抓到执行者不等于完整破案。
 
-### 风险 2：何锐过早暴露
+### 风险 2：证物卡仍偏摘要
 
-何锐拥有备用权限、车辆记录和伤口三重线索，玩家可能很快锁定执行者。但这可以接受，因为本案重点不是“谁挥刀”，而是“谁让他挥刀”。
+目前证物卡可以支撑试玩，但还不是完全沉浸式 UI 文本。后续可补成正式证物档案。
 
-### 风险 3：三人死亡顺序需要更精细法医支持
+### 风险 3：真实玩家可能走出未覆盖路线
 
-目前已有顾念通话、顾明远血迹、赵雅琴回家记录，但可继续补强尸温、胃内容物、血液凝固等法医细节。
+目前 playtest 是模拟路线，真实玩家可能先查公司、先查学校、先查财务或乱序指控，需要进一步压力测试。
 
 ---
 
@@ -113,17 +140,16 @@ Frozen：NO
 
 推荐顺序：
 
-1. 创建 `playtest.md`。
-2. 创建 `playtest_runs/run_001_standard_route.md`。
-3. 补充 `database/forensics.md`。
-4. 补充 `evidence/` 目录下玩家可见证物卡。
-5. 进行一次模拟游玩。
+1. 补 `npc/interrogation_cards.md`。
+2. 补 `evidence/E10_forensics_dna.md`、`E11_company_materials.md`、`E12_communication.md`。
+3. 做一次真实玩家试玩。
+4. 根据试玩反馈决定是否进入 Release Candidate。
 
 ---
 
 ## 8. 封包声明
 
-Case002《第十九层》目前不是冻结封包，而是第一版可开发案件包。
+Case002《第十九层》目前为可试玩草稿，不是冻结封包。
 
 ```text
 我的因果，由我完成。
