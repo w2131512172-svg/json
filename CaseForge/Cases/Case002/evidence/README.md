@@ -21,9 +21,20 @@
 - `E07_forensics_preliminary.md`：初步尸检摘要。
 - `E08_company_index.md`：电脑文件索引残留。
 - `E09_financial_record.md`：异常转账记录。
+- `E10_forensics_review.md`：法医复检摘要。
+- `E11_company_context.md`：公司线调查摘要。
+- `E12_communication.md`：通讯记录摘要。
 
 ---
 
 ## 使用建议
 
 玩家调查对应地点或提出对应申请后，DM 可将对应证物卡内容作为发现结果发给玩家。
+
+建议释放顺序：
+
+1. 现场类证物：E01-E05。
+2. 时间线类证物：E06-E07、E10。
+3. 公司线/动机类证物：E08-E09、E11-E12。
+
+DM 应根据玩家行动释放证物，不应按编号机械发放。
