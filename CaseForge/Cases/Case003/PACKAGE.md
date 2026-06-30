@@ -2,19 +2,21 @@
 
 案件名：第三次葬礼
 模板类型：Fragmented Circular Narrative
-版本：v0.1 Draft
-状态：DRAFT
+版本：v0.2 Playable Draft Candidate
+状态：PLAYABLE_DRAFT_CANDIDATE
 
 ---
 
 ## 1. 当前判定
 
 ```text
-Case003：DRAFT
+Case003：PLAYABLE_DRAFT_CANDIDATE
 Template：Fragmented Circular Narrative
-Playable：NO
+Playable：PARTIAL
 Release Candidate：NO
 Frozen：NO
+BUGFIX001：PARTIAL_APPLIED
+Need Verification：Run 004
 ```
 
 ---
@@ -47,12 +49,42 @@ Frozen：NO
 - `player_materials/clue_board.md`
 - `player_materials/relationship_map.md`
 - `player_materials/case_closure_template.md`
+- `player_materials/final_questions.md`
+
+### 玩家可见碎片卡
+
+- `evidence/README.md`
+- `evidence/fragment_cards/F01_white_cloth_name.md`
+- `evidence/fragment_cards/F02_second_gong.md`
+- `evidence/fragment_cards/F03_account_page.md`
+- `evidence/fragment_cards/F04_paper_effigy.md`
+- `evidence/fragment_cards/F05_coffin_register.md`
+- `evidence/fragment_cards/F06_child_witness.md`
+- `evidence/fragment_cards/F07_bridge_stele.md`
+- `evidence/fragment_cards/F08_keeper_statement.md`
+- `evidence/fragment_cards/F09_old_coat.md`
+- `evidence/fragment_cards/F10_stage_backdoor.md`
+- `evidence/fragment_cards/F11_driver_route.md`
+- `evidence/fragment_cards/F12_missing_portrait.md`
+- `evidence/fragment_cards/F13_night_knock.md`
+- `evidence/fragment_cards/F14_red_silk.md`
+- `evidence/fragment_cards/F15_old_rope.md`
+- `evidence/fragment_cards/F16_third_funeral_list.md`
 
 ### NPC 与调查
 
 - `npc/perspective_interrogation_cards.md`
 - `investigation/flow.md`
 - `investigation/anti_timeline_rules.md`
+- `investigation/final_review_scene.md`
+
+### 测试与补丁
+
+- `playtest.md`
+- `playtest_runs/run_001_fragment_collection.md`
+- `playtest_runs/run_002_false_order_route.md`
+- `playtest_runs/run_003_causality_closure.md`
+- `patches/BUGFIX001_closure_support.md`
 
 ---
 
@@ -63,6 +95,7 @@ Frozen：NO
 - 玩家非剧透开局。
 - 多地点调查入口。
 - 16 个碎片事件。
+- 16 张玩家可见碎片卡。
 - 5 条视角线。
 - 9 个因果节点。
 - 6 条错误顺序路线。
@@ -72,34 +105,56 @@ Frozen：NO
 - 玩家碎片板。
 - 玩家关系图。
 - 玩家结案模板。
+- 最终结案问题清单。
+- 最终核验场景。
 - 防时间轴打穿规则。
+- 三条模拟 playtest 路线。
 
 ---
 
-## 4. 尚未完成
+## 4. Playtest 结果
+
+```text
+Run 001：SOFT PASS
+Run 002：PASS
+Run 003：SOFT PASS
+```
+
+### Run 001 结论
+
+碎片收集路线可以运行，但旧款线入口和碎片释放节奏需要优化。
+
+### Run 002 结论
+
+错误顺序路线成立，DM 可自然纠偏，不需要剧透。
+
+### Run 003 结论
+
+玩家可以从碎片进入因果闭环，但最终结案引导和责任层级拆分需要强化。
+
+---
+
+## 5. 尚未完成
 
 后续需要：
 
-1. 创建 `playtest.md`。
-2. 创建 `playtest_runs/run_001_fragment_collection.md`。
-3. 创建 `playtest_runs/run_002_false_order_route.md`。
-4. 创建 `playtest_runs/run_003_causality_closure.md`。
-5. 补充玩家可见碎片卡目录。
-6. 测试玩家是否会过早时间轴化。
-7. 测试玩家是否能从碎片组合获得推进感。
-8. 决定是否推进 v0.2 Playable Draft。
+1. 跑 `playtest_runs/run_004_after_bugfix_closure.md`。
+2. 验证 `final_questions.md` 是否能承载最终结案。
+3. 验证 `final_review_scene.md` 是否能改善责任层级拆分。
+4. 补传闻污染玩家材料，例如 `player_materials/rumor_clippings.md`。
+5. 根据 Run 004 结果决定是否进入 `VERIFIED_PLAYABLE_DRAFT`。
 
 ---
 
-## 5. 风险点
+## 6. 风险点
 
 ### 风险 1：信息混乱度过高
 
-碎片环形叙事容易让玩家前期迷失。需要 playtest 检查碎片释放节奏。
+碎片环形叙事容易让玩家前期迷失。需要继续检查碎片释放节奏。
 
 ### 风险 2：误导过强
 
-林小满线、诈尸传闻线、葬礼线都可能让玩家误锁单一路线，需要 reveal_map 保证可纠偏。
+纸扎铺线、传闻线、葬礼线都可能让玩家误锁单一路线，需要 reveal_map 保证可纠偏。
 
 ### 风险 3：核心真相过早被看穿
 
@@ -111,21 +166,20 @@ DM 必须坚持因果结构清晰，避免“为了非线性而混乱”。
 
 ---
 
-## 6. 下一步建议
+## 7. 下一步建议
 
 推荐顺序：
 
-1. 补 `evidence/README.md` 与 `evidence/fragment_cards/`。
-2. 创建 `playtest.md`。
-3. 跑 Run 001：碎片收集路线。
-4. 跑 Run 002：错误顺序路线。
-5. 根据测试结果做 BUGFIX001。
+1. 补 `player_materials/rumor_clippings.md`。
+2. 跑 Run 004：BUGFIX001 后结案支撑测试。
+3. 根据 Run 004 结果修正 `ending.md` 或 `final_review_scene.md`。
+4. 决定是否推进 v0.3 Verified Playable Draft。
 
 ---
 
-## 7. 封包声明
+## 8. 封包声明
 
-Case003《第三次葬礼》目前为第一版开发草稿，不是可玩封包。
+Case003《第三次葬礼》目前为可试玩草稿候选，不是冻结封包。
 
 ```text
 我的因果，由我完成。
