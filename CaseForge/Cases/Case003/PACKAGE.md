@@ -2,21 +2,21 @@
 
 案件名：第三次葬礼
 模板类型：Fragmented Circular Narrative
-版本：v0.2 Playable Draft Candidate
-状态：PLAYABLE_DRAFT_CANDIDATE
+版本：v0.3 Verified Playable Draft
+状态：VERIFIED_PLAYABLE_DRAFT
 
 ---
 
 ## 1. 当前判定
 
 ```text
-Case003：PLAYABLE_DRAFT_CANDIDATE
+Case003：VERIFIED_PLAYABLE_DRAFT
 Template：Fragmented Circular Narrative
-Playable：PARTIAL
+Playable：YES
 Release Candidate：NO
 Frozen：NO
-BUGFIX001：PARTIAL_APPLIED
-Need Verification：Run 004
+BUGFIX001：VERIFIED
+Run 004：PASS
 ```
 
 ---
@@ -50,6 +50,7 @@ Need Verification：Run 004
 - `player_materials/relationship_map.md`
 - `player_materials/case_closure_template.md`
 - `player_materials/final_questions.md`
+- `player_materials/rumor_clippings.md`
 
 ### 玩家可见碎片卡
 
@@ -84,6 +85,7 @@ Need Verification：Run 004
 - `playtest_runs/run_001_fragment_collection.md`
 - `playtest_runs/run_002_false_order_route.md`
 - `playtest_runs/run_003_causality_closure.md`
+- `playtest_runs/run_004_after_bugfix_closure.md`
 - `patches/BUGFIX001_closure_support.md`
 
 ---
@@ -106,9 +108,10 @@ Need Verification：Run 004
 - 玩家关系图。
 - 玩家结案模板。
 - 最终结案问题清单。
+- 传闻剪报。
 - 最终核验场景。
 - 防时间轴打穿规则。
-- 三条模拟 playtest 路线。
+- 四条模拟 playtest 路线。
 
 ---
 
@@ -118,11 +121,12 @@ Need Verification：Run 004
 Run 001：SOFT PASS
 Run 002：PASS
 Run 003：SOFT PASS
+Run 004：PASS
 ```
 
 ### Run 001 结论
 
-碎片收集路线可以运行，但旧款线入口和碎片释放节奏需要优化。
+碎片收集路线可以运行，但旧款线入口和碎片释放节奏需要继续观察。
 
 ### Run 002 结论
 
@@ -132,21 +136,35 @@ Run 003：SOFT PASS
 
 玩家可以从碎片进入因果闭环，但最终结案引导和责任层级拆分需要强化。
 
----
+### Run 004 结论
 
-## 5. 尚未完成
+BUGFIX001 已验证。
 
-后续需要：
-
-1. 跑 `playtest_runs/run_004_after_bugfix_closure.md`。
-2. 验证 `final_questions.md` 是否能承载最终结案。
-3. 验证 `final_review_scene.md` 是否能改善责任层级拆分。
-4. 补传闻污染玩家材料，例如 `player_materials/rumor_clippings.md`。
-5. 根据 Run 004 结果决定是否进入 `VERIFIED_PLAYABLE_DRAFT`。
+最终问题清单、最终核验场景、传闻剪报能够承接后期结案，责任层级比 Run 003 更清晰。
 
 ---
 
-## 6. 风险点
+## 5. 当前结论
+
+Case003 已具备 DM 主持式可试玩能力。
+
+当前仍不是 Release Candidate，也未冻结。
+
+---
+
+## 6. 尚未完成
+
+后续建议：
+
+1. 真实玩家试玩。
+2. 根据真实试玩调整 reveal_map。
+3. 继续观察早期旧款线入口是否偏弱。
+4. 补地点关系图或图片资源。
+5. 根据真实试玩结果决定是否推进 Release Candidate。
+
+---
+
+## 7. 风险点
 
 ### 风险 1：信息混乱度过高
 
@@ -166,20 +184,20 @@ DM 必须坚持因果结构清晰，避免“为了非线性而混乱”。
 
 ---
 
-## 7. 下一步建议
+## 8. 下一步建议
 
 推荐顺序：
 
-1. 补 `player_materials/rumor_clippings.md`。
-2. 跑 Run 004：BUGFIX001 后结案支撑测试。
-3. 根据 Run 004 结果修正 `ending.md` 或 `final_review_scene.md`。
-4. 决定是否推进 v0.3 Verified Playable Draft。
+1. 补 `assets/location_map_prompt.md`。
+2. 跑一次真实玩家试玩。
+3. 根据真实试玩反馈做 BUGFIX002。
+4. 决定是否推进 v0.4 Release Candidate。
 
 ---
 
-## 8. 封包声明
+## 9. 封包声明
 
-Case003《第三次葬礼》目前为可试玩草稿候选，不是冻结封包。
+Case003《第三次葬礼》目前为已验证可试玩草稿，不是冻结封包。
 
 ```text
 我的因果，由我完成。
