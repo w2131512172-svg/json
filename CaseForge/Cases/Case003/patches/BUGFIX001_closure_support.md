@@ -1,9 +1,9 @@
 # BUGFIX001：Closure Support
 
 案件：Case003《第三次葬礼》
-状态：PLANNED
-Applied：PARTIAL
-Need Verification：Run 004
+状态：VERIFIED
+Applied：YES
+Verified By：Run 004
 
 ---
 
@@ -43,22 +43,35 @@ Case003 已具备从碎片进入因果闭环的基础能力。
 - 让玩家用碎片核验 NPC 说法。
 - 强化责任层级拆分。
 
+### C. 传闻污染材料
+
+新增：
+
+- `player_materials/rumor_clippings.md`
+
+作用：
+
+- 补足传闻污染线。
+- 在玩家卡错方向时提供自然纠偏材料。
+
 ---
 
-## 3. 仍需验证
+## 3. Run 004 验证结果
 
-Run 004 需要测试：
+Run 004 已验证：
 
-1. 玩家是否能用 `final_questions.md` 完成结案陈述。
-2. `final_review_scene.md` 是否能承接中后期推理。
-3. DM 是否仍能避免直接剧透。
-4. 责任层级是否比 Run 003 更清晰。
+1. `final_questions.md` 能承载最终结案陈述。
+2. `final_review_scene.md` 能承接中后期推理。
+3. DM 可以继续避免直接剧透。
+4. 责任层级比 Run 003 更清晰。
+5. `rumor_clippings.md` 能补足中期纠偏。
 
 ---
 
 ## 4. 当前判定
 
 ```text
-BUGFIX001：PARTIAL_APPLIED
-Need Verification：Run 004
+BUGFIX001：VERIFIED
+Applied：YES
+Verified By：Run 004
 ```
