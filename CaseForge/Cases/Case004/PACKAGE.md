@@ -4,23 +4,25 @@
 
 模板类型：Joint Crime Montage Multi-Case
 
-版本：v0.1 Concept Draft
+版本：v0.2 Playable Skeleton Draft
 
-状态：CONCEPT_DRAFT
+状态：PLAYABLE_SKELETON_DRAFT
 
 ---
 
 ## 1. 当前判定
 
 ```text
-Case004：CONCEPT_DRAFT
+Case004：PLAYABLE_SKELETON_DRAFT
 Template：Joint Crime Montage Multi-Case
-Playable：NO
+Playable：SOFT YES
 Release Candidate：NO
 Frozen：NO
 Core Truth：Drafted
 Montage Frame：Drafted
 Joint Crime Chain：Drafted
+Fairness Guard：INSTALLED
+Need Playtest：YES
 ```
 
 ---
@@ -67,14 +69,46 @@ C 案：旧录像失踪案
 - `database/joint_crime_chain.md`
 - `database/npc.md`
 - `database/evidence.md`
+- `database/evidence_dependency.md`
 - `database/locations.md`
 - `database/reveal_map.md`
 - `database/ending.md`
 
-### 调查与测试
+### 玩家材料
 
+- `player_materials/case_brief.md`
+- `player_materials/clue_board.md`
+- `player_materials/relationship_map.md`
+- `player_materials/timeline_board.md`
+- `player_materials/case_closure_template.md`
+
+### 玩家可见碎片卡
+
+- `evidence/README.md`
+- `evidence/fragment_cards/F01_autopsy_summary.md`
+- `evidence/fragment_cards/F02_rooftop_railing.md`
+- `evidence/fragment_cards/F03_alley_blood.md`
+- `evidence/fragment_cards/F04_unsent_message.md`
+- `evidence/fragment_cards/F05_missing_hard_drive.md`
+- `evidence/fragment_cards/F06_blocked_street_camera.md`
+- `evidence/fragment_cards/F07_blue_tarp.md`
+- `evidence/fragment_cards/F08_warehouse_drag_marks.md`
+- `evidence/fragment_cards/F09_fire_origin.md`
+- `evidence/fragment_cards/F10_w17_video_catalog.md`
+- `evidence/fragment_cards/F11_qi_mu_notes.md`
+- `evidence/fragment_cards/F12_old_group_photo.md`
+
+### NPC 与调查
+
+- `npc/interrogation_cards.md`
 - `investigation/flow.md`
 - `investigation/dm_rules.md`
+
+### 验证与补丁
+
+- `CaseForge/validation/check_player_fairness.md`
+- `CaseForge/validation/check_no_late_additions.md`
+- `patches/BUGFIX001_fairness_guard.md`
 - `playtest.md`
 
 ---
@@ -88,9 +122,14 @@ C 案：旧录像失踪案
 - 固定 8 名主要人物。
 - 第一幕全部关键人物登场。
 - 第一幕埋入全部关键物证影子。
+- 12 张玩家可见碎片卡。
+- 玩家线索板、关系图、时间线板。
+- NPC 三阶段问话。
 - 蒙太奇片段顺序误导。
-- 共同犯罪责任链草案。
+- 共同犯罪责任链。
+- 证据依赖图。
 - 多案合一最终答案方向。
+- 公平性检查清单。
 
 ---
 
@@ -98,13 +137,13 @@ C 案：旧录像失踪案
 
 后续需要补：
 
-1. 玩家可见线索卡。
-2. NPC 分阶段问话卡。
-3. 地点调查细节。
-4. 证据释放节奏。
-5. Playtest 路线。
-6. 结案问题清单。
-7. 真实试玩后 BUGFIX001。
+1. 更细的地点调查卡。
+2. 每名 NPC 独立问话卡拆分。
+3. Playtest Run 001 / 002 / 003 实跑记录。
+4. 根据真实试玩调整 false_order 与 reveal_map。
+5. 结案问题清单独立文件。
+6. 图片资源 prompt。
+7. 决定是否推进 v0.3 Verified Playable Draft。
 
 ---
 
@@ -126,24 +165,27 @@ C 案：旧录像失踪案
 
 所有错序片段必须可被玩家通过细节校正，不能靠结尾硬解释。
 
+### 风险 5：齐牧误导过强
+
+齐牧可以是后期操盘者，但不能变成万能幕后黑手。
+
 ---
 
 ## 7. 下一步建议
 
 推荐顺序：
 
-1. 补 `player_materials/case_brief.md`。
-2. 补 `evidence/fragment_cards/`。
-3. 补 NPC 问话卡。
-4. 跑 Run 001：普通玩家按表层三案调查。
-5. 跑 Run 002：高敏玩家尝试三案合一。
-6. 根据测试调整 reveal_map。
+1. 跑 Run 001：普通玩家按表层三案调查。
+2. 跑 Run 002：高敏玩家从尸检打穿“坠楼即死”。
+3. 跑 Run 003：玩家追踪蓝色防雨布进行三案合一。
+4. 调整 false_order，让假路线能解释 80% 证据但被关键细节击破。
+5. 根据测试决定是否推进 v0.3。
 
 ---
 
 ## 8. 封包声明
 
-Case004《错帧》目前是概念草稿，不可直接作为正式 DM 案件运行。
+Case004《错帧》目前是可试玩骨架草稿，不是冻结封包。
 
 ```text
 我的因果，由我完成。
