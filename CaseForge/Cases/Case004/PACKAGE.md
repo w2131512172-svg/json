@@ -22,7 +22,11 @@ Core Truth：Drafted
 Montage Frame：Drafted
 Joint Crime Chain：Drafted
 Fairness Guard：INSTALLED
-Need Playtest：YES
+Playtest Run 001：SOFT PASS
+Playtest Run 002：PASS
+Playtest Run 003：PASS
+Playtest Run 004：PASS
+Need Run 005：YES
 ```
 
 ---
@@ -104,12 +108,16 @@ C 案：旧录像失踪案
 - `investigation/flow.md`
 - `investigation/dm_rules.md`
 
-### 验证与补丁
+### 测试与验证
 
+- `playtest.md`
+- `playtest_runs/run_001_surface_three_cases.md`
+- `playtest_runs/run_002_autopsy_breakthrough.md`
+- `playtest_runs/run_003_blue_tarp_route.md`
+- `playtest_runs/run_004_false_qi_mu_route.md`
 - `CaseForge/validation/check_player_fairness.md`
 - `CaseForge/validation/check_no_late_additions.md`
 - `patches/BUGFIX001_fairness_guard.md`
-- `playtest.md`
 
 ---
 
@@ -130,6 +138,7 @@ C 案：旧录像失踪案
 - 证据依赖图。
 - 多案合一最终答案方向。
 - 公平性检查清单。
+- 4 条模拟 playtest 路线。
 
 ---
 
@@ -137,9 +146,9 @@ C 案：旧录像失踪案
 
 后续需要补：
 
-1. 更细的地点调查卡。
-2. 每名 NPC 独立问话卡拆分。
-3. Playtest Run 001 / 002 / 003 实跑记录。
+1. Playtest Run 005：共同犯罪结案路线。
+2. 更细的地点调查卡。
+3. 每名 NPC 独立问话卡拆分。
 4. 根据真实试玩调整 false_order 与 reveal_map。
 5. 结案问题清单独立文件。
 6. 图片资源 prompt。
@@ -169,17 +178,20 @@ C 案：旧录像失踪案
 
 齐牧可以是后期操盘者，但不能变成万能幕后黑手。
 
+### 风险 6：尸检入口过强
+
+高敏玩家会较早发现“坠楼即死”不成立。当前判断：保留该入口，用后续责任链维持难度。
+
 ---
 
 ## 7. 下一步建议
 
 推荐顺序：
 
-1. 跑 Run 001：普通玩家按表层三案调查。
-2. 跑 Run 002：高敏玩家从尸检打穿“坠楼即死”。
-3. 跑 Run 003：玩家追踪蓝色防雨布进行三案合一。
-4. 调整 false_order，让假路线能解释 80% 证据但被关键细节击破。
-5. 根据测试决定是否推进 v0.3。
+1. 跑 Run 005：共同犯罪结案路线。
+2. 调整 false_order，让假路线能解释 80% 证据但被关键细节击破。
+3. 细化地点调查卡。
+4. 根据测试决定是否推进 v0.3。
 
 ---
 
